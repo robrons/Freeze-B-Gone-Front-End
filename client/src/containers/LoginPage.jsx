@@ -6,7 +6,7 @@ class LoginPage extends React.Component {
 
   /**
    * Class constructor.
-   */
+   */ 
   constructor(props) {
     super(props);
 
