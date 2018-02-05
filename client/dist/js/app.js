@@ -34917,6 +34917,7 @@
 	      { className: 'text-center' },
 	      'Sign in to Freeze-B-Gone'
 	    ),
+	    _react2.default.createElement('div', { className: 'g-signin2', 'data-onsuccess': 'onSignIn', 'data-theme': 'dark' }),
 	    _react2.default.createElement('hr', null),
 	    _react2.default.createElement(
 	      _Card.Card,

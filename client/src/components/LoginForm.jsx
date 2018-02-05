@@ -13,6 +13,7 @@ const LoginForm = ({
 }) => (
   <div>
   <h2 className="text-center">Sign in to Freeze-B-Gone</h2>
+  <div className="g-signin2" data-onsuccess="onSignIn" data-theme="dark" ></div>
   <hr></hr>
   <Card className="container">
     <form action="/" onSubmit={onSubmit}>

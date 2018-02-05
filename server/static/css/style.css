@@ -34,6 +34,15 @@ hr {
   font-size: 40px;
 }
 
+.g-signin2{
+  width: 100%;
+}
+
+.g-signin2 > div{
+  margin: 0 auto;
+
+}
+
 .top-bar {
   padding: 10px 15px;
   margin-bottom: 50px;
@@ -55,6 +64,7 @@ hr {
   font-family: 'Rammetto One', cursive;
 
 }
+
 
 .top-bar a,
 .nav a {
