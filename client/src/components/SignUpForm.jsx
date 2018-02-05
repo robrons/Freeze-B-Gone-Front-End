@@ -11,10 +11,12 @@ const SignUpForm = ({
   errors,
   user,
 }) => (
- <div>
+  <div>
   <h2 className="text-center">Create your free account</h2>
+  <hr></hr>
   <Card className="container">
     <form action="/" onSubmit={onSubmit}>
+
       {errors.summary && <p className="error-message">{errors.summary}</p>}
 
       <div className="field-line">

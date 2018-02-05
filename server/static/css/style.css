@@ -44,10 +44,12 @@ hr {
 }
 
 .top-bar {
-  padding: 10px 15px;
-  margin-bottom: 50px;
+  z-index: 1;
+  padding: 10px 15px 0px;
+  margin-bottom: 0px;
 }
 .top-bar::after {
+
   content: '';
   display: block;
   clear: both;
