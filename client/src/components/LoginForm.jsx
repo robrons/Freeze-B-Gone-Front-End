@@ -5,15 +5,17 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 
-const LoginForm = ({
+const LoginForm = ({ 
   onSubmit,
   onChange,
   errors,
   user
 }) => (
+  <div>
+  <h2 className="text-center">Sign in to Freeze-B-Gone</h2>
+  <hr></hr>
   <Card className="container">
     <form action="/" onSubmit={onSubmit}>
-      <h2 className="card-heading">Login</h2>
 
       {errors.summary && <p className="error-message">{errors.summary}</p>}
 
@@ -45,6 +47,7 @@ const LoginForm = ({
       <CardText>Don't have an account? <Link to={'/signup'}>Create one</Link>.</CardText>
     </form>
   </Card>
+  </div>
 );
 
 LoginForm.propTypes = {

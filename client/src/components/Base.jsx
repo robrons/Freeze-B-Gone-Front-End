@@ -1,13 +1,15 @@
 import React, { PropTypes } from 'react';
 import { Link, IndexLink } from 'react-router';
-import RaisedButton from 'material-ui/RaisedButton';
+import image from './mainPage.jpg';
 
-const style = {
-  margin: 12,
+var styles = {
+color:'violet',
+backgroundImage: 'url('+image+')',
+height: '100vh'
 };
 
 const Base = ({ children }) => (
-  <div>
+  <div style={styles}>
     <div className="top-bar">
       <div className="top-bar-left">
         <IndexLink to="/">Freeze-B-Gone</IndexLink>
@@ -15,7 +17,7 @@ const Base = ({ children }) => (
 
       <div className="top-bar-right">
         <Link to="/">LOGIN</Link>
-        <Link to="/signup"> <RaisedButton label="SIGNUP" primary={true}/></Link>
+        <Link to="/signup">SIGNUP</Link>
       </div>
 
     </div>

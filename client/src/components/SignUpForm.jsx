@@ -11,10 +11,10 @@ const SignUpForm = ({
   errors,
   user,
 }) => (
+ <div>
+  <h2 className="text-center">Create your free account</h2>
   <Card className="container">
     <form action="/" onSubmit={onSubmit}>
-      <h2 className="card-heading">Sign Up</h2>
-
       {errors.summary && <p className="error-message">{errors.summary}</p>}
 
       <div className="field-line">
@@ -42,7 +42,7 @@ const SignUpForm = ({
           floatingLabelText="Password"
           type="password"
           name="password"
-          onChange={onChange}
+          onChange={onChange} 
           errorText={errors.password}
           value={user.password}
         />
@@ -55,6 +55,7 @@ const SignUpForm = ({
       <CardText>Already have an account? <Link to={'/'}>Log in</Link></CardText>
     </form>
   </Card>
+  </div>
 );
 
 SignUpForm.propTypes = {
