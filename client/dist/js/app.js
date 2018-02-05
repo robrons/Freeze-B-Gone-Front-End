@@ -34853,7 +34853,15 @@
 
 	var _reactRouter = __webpack_require__(338);
 
+	var _RaisedButton = __webpack_require__(457);
+
+	var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var style = {
+	  margin: 12
+	};
 
 	var Base = function Base(_ref) {
 	  var children = _ref.children;
@@ -34869,7 +34877,7 @@
 	        _react2.default.createElement(
 	          _reactRouter.IndexLink,
 	          { to: '/' },
-	          'React App'
+	          'Freeze-B-Gone'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -34878,12 +34886,13 @@
 	        _react2.default.createElement(
 	          _reactRouter.Link,
 	          { to: '/login' },
-	          'Log in'
+	          'LOGIN'
 	        ),
 	        _react2.default.createElement(
 	          _reactRouter.Link,
 	          { to: '/signup' },
-	          'Sign up'
+	          ' ',
+	          _react2.default.createElement(_RaisedButton2.default, { label: 'SIGNUP', primary: true, style: style })
 	        )
 	      )
 	    ),
