@@ -14,8 +14,8 @@ const Base = ({ children }) => (
       </div>
 
       <div className="top-bar-right">
-        <Link to="/login">LOGIN</Link>
-        <Link to="/signup"> <RaisedButton label="SIGNUP" primary={true} style={style}/></Link>
+        <Link to="/">LOGIN</Link>
+        <Link to="/signup"> <RaisedButton label="SIGNUP" primary={true}/></Link>
       </div>
 
     </div>
