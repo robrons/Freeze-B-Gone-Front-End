@@ -14,11 +14,10 @@ const muiTheme = getMuiTheme({
   palette: {
     textColor: cyan500,
 
-  },
-  fontFamily: 'Rammetto One, cursive',
+  }, 
+  fontFamily:  'Roboto, sans-serif',
   palette: {
   	canvasColor: grey400,
-  	opacity: 0,
   },
 });
 
