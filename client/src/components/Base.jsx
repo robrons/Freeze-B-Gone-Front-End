@@ -4,6 +4,7 @@ import Particles from 'react-particles-js';
 
 const style = {
   position: 'absolute',
+  "z-index": '-1',
   height: '103.5vh',
   width: '100%',
 }
@@ -18,21 +19,21 @@ const params = {
       }
     },
     "color": {
-      "value": "#1b1e34"
+      "value": "#99ebff"
     },
     "shape": {
-      "type": "polygon",
+      "type": "image",
       "stroke": {
         "width": 0,
         "color": "#000"
       },
       "polygon": {
-        "nb_sides": 6
+        "nb_sides": 8
       },
       "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "src": "https://clipartion.com/wp-content/uploads/2015/11/ms-gilberts-crew-january-2.png",
+        "width": 1115,
+        "height": 1275
       }
     },
     "opacity": {

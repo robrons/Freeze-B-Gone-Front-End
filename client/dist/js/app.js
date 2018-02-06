@@ -54,13 +54,15 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
+	var _colors = __webpack_require__(250);
+
 	var _reactTapEventPlugin = __webpack_require__(184);
 
 	var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
-	var _getMuiTheme = __webpack_require__(190);
+	var _getMuiTheme2 = __webpack_require__(190);
 
-	var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
+	var _getMuiTheme3 = _interopRequireDefault(_getMuiTheme2);
 
 	var _MuiThemeProvider = __webpack_require__(294);
 
@@ -74,12 +76,25 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	// remove tap delay, essential for MaterialUI to work properly
 	(0, _reactTapEventPlugin2.default)();
 
+	var muiTheme = (0, _getMuiTheme3.default)(_defineProperty({
+	  palette: {
+	    textColor: _colors.cyan500
+
+	  },
+	  fontFamily: 'Rammetto One, cursive'
+	}, 'palette', {
+	  canvasColor: _colors.grey400,
+	  opacity: 0
+	}));
+
 	_reactDom2.default.render(_react2.default.createElement(
 	  _MuiThemeProvider2.default,
-	  { muiTheme: (0, _getMuiTheme2.default)() },
+	  { muiTheme: muiTheme },
 	  _react2.default.createElement(_reactRouter.Router, { history: _reactRouter.browserHistory, routes: _routes2.default })
 	), document.getElementById('react-app'));
 
@@ -34713,6 +34728,7 @@
 
 	var style = {
 	  position: 'absolute',
+	  "z-index": '-1',
 	  height: '103.5vh',
 	  width: '100%'
 	};
@@ -34727,21 +34743,21 @@
 	      }
 	    },
 	    "color": {
-	      "value": "#1b1e34"
+	      "value": "#99ebff"
 	    },
 	    "shape": {
-	      "type": "polygon",
+	      "type": "image",
 	      "stroke": {
 	        "width": 0,
 	        "color": "#000"
 	      },
 	      "polygon": {
-	        "nb_sides": 6
+	        "nb_sides": 8
 	      },
 	      "image": {
-	        "src": "img/github.svg",
-	        "width": 100,
-	        "height": 100
+	        "src": "https://clipartion.com/wp-content/uploads/2015/11/ms-gilberts-crew-january-2.png",
+	        "width": 1115,
+	        "height": 1275
 	      }
 	    },
 	    "opacity": {
