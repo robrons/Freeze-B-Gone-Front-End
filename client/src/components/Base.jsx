@@ -65,8 +65,8 @@ const params = {
     },
     "move": {
       "enable": true,
-      "speed": 8,
-      "direction": "none",
+      "speed": 5,
+      "direction": "bottom",
       "random": false,
       "straight": false,
       "out_mode": "out",

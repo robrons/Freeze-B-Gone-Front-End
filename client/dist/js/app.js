@@ -88,7 +88,8 @@
 	  },
 	  fontFamily: 'Roboto, sans-serif'
 	}, 'palette', {
-	  canvasColor: _colors.grey400
+	  canvasColor: _colors.lightBlue50,
+	  borderColor: _colors.darkBlack
 	}));
 
 	_reactDom2.default.render(_react2.default.createElement(
@@ -34788,8 +34789,8 @@
 	    },
 	    "move": {
 	      "enable": true,
-	      "speed": 8,
-	      "direction": "none",
+	      "speed": 5,
+	      "direction": "bottom",
 	      "random": false,
 	      "straight": false,
 	      "out_mode": "out",

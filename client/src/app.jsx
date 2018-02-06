@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { cyan500, orange300, blueGrey400, limeA100, grey400 } from 'material-ui/styles/colors';
+import { cyan500, orange300, blueGrey400, limeA100, grey400, darkBlack, purpleA100, lightBlue50 } from 'material-ui/styles/colors';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -17,7 +17,8 @@ const muiTheme = getMuiTheme({
   }, 
   fontFamily:  'Roboto, sans-serif',
   palette: {
-  	canvasColor: grey400,
+  	canvasColor: lightBlue50,
+    borderColor: darkBlack,
   },
 });
 
