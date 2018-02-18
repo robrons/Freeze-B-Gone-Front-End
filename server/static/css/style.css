@@ -19,15 +19,17 @@ a:hover {
   color: #1976d2;
 }
 
+
 hr {
   z-index: 1;
   position: relative;
   margin-bottom: 35px;
-  margin-left: 32vw;
-  margin-right: 32vw;
+  margin-left: 34vw;
+  margin-right: 34vw;
   border-width: 1px;
-  border-color: #000000
+  border-color: #878787
 }
+
 
 .text-center {
   z-index: 1;
@@ -35,7 +37,7 @@ hr {
   margin-bottom: 10px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  color: #000000; 
+  color: #878787; 
   font-size: 37px;
 }
 

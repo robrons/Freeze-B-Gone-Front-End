@@ -18,7 +18,7 @@ const muiTheme = getMuiTheme({
   fontFamily:  'Roboto, sans-serif',
   palette: {
   	canvasColor: lightBlue50,
-    borderColor: darkBlack,
+    borderColor: grey400,
   },
 });
 

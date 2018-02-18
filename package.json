@@ -1,17 +1,12 @@
 {
-  "name": "authentication-in-react-apps",
+  "name": "Freeze-B-GoneUI",
   "version": "1.0.0",
-  "description": "Authentication in React Applications, Part 1: Creating Components",
   "main": "index.js",
   "scripts": {
     "start": "nodemon --use_strict index.js",
     "bundle": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vladimirponomarev/authentication-in-react-apps.git"
-  },
-  "author": "Vladimir Ponomarev",
+  "author": "Robin Ronson",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
