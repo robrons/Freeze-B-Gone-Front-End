@@ -38,13 +38,14 @@
     }
   },
   "dependencies": {
+    "firebaseui": "^2.6.2",
     "loglevel": "^1.6.1",
+    "material-ui": "^material-ui@next",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
-    "redux": "^3.7.2", 
-    "material-ui": "^material-ui@next"
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
