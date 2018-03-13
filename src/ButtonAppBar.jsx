@@ -21,6 +21,10 @@ const styles = {
   },
 };
 
+function handleClose() {
+  console.log('test')
+};
+
 function ButtonAppBar(props) {
   const { classes } = props;
   return (
@@ -31,9 +35,9 @@ function ButtonAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            Title
+            Freeze-B-Gone
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button onClick={handleClose} color="inherit">Logout</Button>
         </Toolbar>
       </AppBar>
     </div>
