@@ -38,7 +38,6 @@
     }
   },
   "dependencies": {
-    "firebaseui": "^2.6.2",
     "loglevel": "^1.6.1",
     "material-ui": "^material-ui@next",
     "prop-types": "^15.6.0",
