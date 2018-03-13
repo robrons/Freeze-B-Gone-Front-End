@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom'
-import SimpleAppBar from 'MenuAppBar.jsx'
+import MenuAppBar from 'MenuAppBar.jsx'
 
-render(<SimpleAppBar/>, app);
+
+render(<MenuAppBar/>, app);
