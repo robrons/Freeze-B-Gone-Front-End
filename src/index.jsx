@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom'
-import MenuAppBar from 'MenuAppBar.jsx'
+import ButtonAppBar from 'ButtonAppBar.jsx'
 
 
-render(<MenuAppBar/>, app);
+render(<ButtonAppBar/>, app);
