@@ -62,7 +62,6 @@ class ScrollableTabsButtonForce extends React.Component {
             <Tab label="Garden" icon={<GardenIcon />} />
             <Tab label="Kitchen" icon={<KitchenIcon />} />
             <Tab label="Bathroom" icon={<BathRoomIcon />} />
-  
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>Item One</TabContainer>}
