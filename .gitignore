@@ -13,4 +13,5 @@ node_modules/
 # Webpack bundles
 public/*
 !public/index.html
+!public/home.html
 
