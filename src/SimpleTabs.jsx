@@ -7,6 +7,7 @@ import GardenIcon from 'material-ui-icons/LocalFlorist';
 import KitchenIcon from 'material-ui-icons/Kitchen';
 import BathRoomIcon from 'material-ui-icons/HotTub';
 import Typography from 'material-ui/Typography';
+import SimpleCard from 'SimpleCard.jsx';
 
 function TabContainer(props) {
   return (
@@ -64,9 +65,9 @@ class ScrollableTabsButtonForce extends React.Component {
             <Tab label="Bathroom" icon={<BathRoomIcon />} />
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer>Item One</TabContainer>}
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
-        {value === 2 && <TabContainer>Item Three</TabContainer>}
+        {value === 0 && <TabContainer><SimpleCard/></TabContainer>}
+        {value === 1 && <TabContainer><SimpleCard/></TabContainer>}
+        {value === 2 && <TabContainer><SimpleCard/></TabContainer>}
       </div>
     );
   }
