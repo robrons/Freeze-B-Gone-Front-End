@@ -21,7 +21,7 @@ const base = {
 
   entry: {
     app: [
-      './src/index.jsx',
+      './src/login.jsx',
     ],
   },
 
