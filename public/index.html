@@ -2,57 +2,12 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <title>AntiFreeze</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
   </head>
   <body>
-    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyCNhKNfvK9_lU7h0ntDR5-PgQRMO0Ukn80",
-        authDomain: "freeze-b-gone-auth.firebaseapp.com",
-        databaseURL: "https://freeze-b-gone-auth.firebaseio.com",
-        projectId: "freeze-b-gone-auth",
-        storageBucket: "freeze-b-gone-auth.appspot.com",
-        messagingSenderId: "209465180041"
-      };
-      firebase.initializeApp(config);
-    </script>
-     <script src="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.js"></script>
-     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.2/firebaseui.css" />
-     <script type="text/javascript">
-       // FirebaseUI config.
-       var uiConfig = {
-         signInSuccessUrl: 'home.html',
-         signInOptions: [
-           // Leave the lines as is for the providers you want to offer your users.
-           firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-           firebase.auth.EmailAuthProvider.PROVIDER_ID
-         ],
-         // Terms of service url.
-         tosUrl: '<your-tos-url>'
-       };
- 
-       // Initialize the FirebaseUI Widget using Firebase.
-       var ui = new firebaseui.auth.AuthUI(firebase.auth());
-       // The start method will wait until the DOM is loaded.
-       ui.start('#firebaseui-auth-container', uiConfig);
-     </script>
-   </head>
-   <body>
-     <div id="firebaseui-auth-container">
-       <div class="top-bar">
-          <div class="top-bar-left">
-            Freeze-B-Gone
-          </div>
-       </div>
-     </div>
-   </body>
-   <div id="appLogin"></div>
-   <script src="script/notification.js"></script>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
   </body>
 </html>
