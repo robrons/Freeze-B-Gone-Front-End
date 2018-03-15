@@ -1,12 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom'
 import Home from 'home.jsx'
-import {Router, Route, IndexRoute, hashHistory} from "react-router"
+import { HashRouter, Route, IndexRoute, hashHistory } from 'react-router-dom'
+import FloatingActionButton from 'FloatingActionButton.jsx';
 
 render(
-        <Router history={hashHistory}>
-        <Route path="/" component={Home}>
-
+        <HashRouter history={hashHistory}>
+        <Route path="/" component = {FloatingActionButton}>
         </Route>
-        </Router>
-, app);
+        </HashRouter>
+, document.getElementById('app'));
