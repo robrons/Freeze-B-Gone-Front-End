@@ -3,6 +3,7 @@ import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase';
 import ButtonAppBar from 'ButtonAppBar.jsx'
+import Home from 'home.jsx'
 
 // Configure Firebase.
 const config = {
@@ -55,9 +56,7 @@ export default class SignInScreen extends React.Component {
     }
     return (
       <div>
-        <h1>My App</h1>
-        <p>Welcome {firebase.auth().currentUser.displayName}! You are now signed-in!</p>
-        <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+        <Home/>
       </div>
     );
   }
