@@ -49,7 +49,7 @@ export default class SignInScreen extends React.Component {
     if (!this.state.signedIn) {
       return (
         <div>
-          <ButtonAppBar />
+          <ButtonAppBar logout={false}/>
           <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()} />
         </div>
       );

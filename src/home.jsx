@@ -5,7 +5,7 @@ import FloatingActionButton from 'FloatingActionButton.jsx';
 
 function Home() {
 return (<div>
-        <ButtonAppBar/>
+        <ButtonAppBar logout={true}/>
         <SimpleTabs/>
         <FloatingActionButton/>
         </div>

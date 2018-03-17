@@ -28,25 +28,42 @@ function handleClose() {
 
 function ButtonAppBar(props) {
   const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            Freeze-B-Gone
+  if (props.logout) {
+    return (
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="title" color="inherit" className={classes.flex}>
+              Freeze-B-Gone
           </Typography>
-          <Button onClick={handleClose} color="inherit">Logout</Button>
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+            <Button onClick={handleClose} color="inherit">Logout</Button>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+  } else {
+    return (
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="title" color="inherit" className={classes.flex}>
+              Freeze-B-Gone
+          </Typography>
+          </Toolbar>
+        </AppBar>
+      </div>
+    );
+
+  }
 }
+  ButtonAppBar.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
 
-ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(ButtonAppBar);
+  export default withStyles(styles)(ButtonAppBar);
