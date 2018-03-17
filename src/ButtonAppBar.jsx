@@ -7,6 +7,7 @@ import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
+import firebase from 'firebase';
 
 const styles = {
   root: {
@@ -22,7 +23,7 @@ const styles = {
 };
 
 function handleClose() {
-  console.log('test')
+  firebase.auth().signOut();
 };
 
 function ButtonAppBar(props) {
