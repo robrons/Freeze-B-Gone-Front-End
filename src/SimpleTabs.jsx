@@ -36,7 +36,7 @@ class NestedList extends React.Component {
     super()
 
     this.state = {
-      open: [0],
+      open: [-1],
     };
 
     this.handleClick = value => () => {
