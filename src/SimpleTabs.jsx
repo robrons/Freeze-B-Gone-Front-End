@@ -5,7 +5,6 @@ import GardenIcon from 'material-ui-icons/LocalFlorist';
 import KitchenIcon from 'material-ui-icons/Kitchen';
 import BathRoomIcon from 'material-ui-icons/HotTub';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-import Divider from 'material-ui/Divider';
 
 const styles = theme => ({
   root: {
@@ -23,21 +22,19 @@ function SimpleList(props) {
           <ListItemIcon>
             <GardenIcon  /> 
           </ListItemIcon>
-          <ListItemText primary="Garden" />
+          <ListItemText primary="Garden" secondary="21 °C"/>
         </ListItem>
-        <Divider />
         <ListItem button>
           <ListItemIcon>
             <KitchenIcon />
           </ListItemIcon>
-          <ListItemText primary="Kitchen" />
+          <ListItemText primary="Kitchen" secondary="22 °C"/>
         </ListItem>      
-        <Divider />
         <ListItem button>
           <ListItemIcon>
             <BathRoomIcon />
           </ListItemIcon>
-          <ListItemText primary="BathRoom" />
+          <ListItemText primary="BathRoom" secondary="20 °C"/>
         </ListItem>
       </List>
     </div>
