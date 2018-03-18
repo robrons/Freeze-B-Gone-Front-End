@@ -5,11 +5,11 @@ import GardenIcon from 'material-ui-icons/LocalFlorist';
 import KitchenIcon from 'material-ui-icons/Kitchen';
 import BathRoomIcon from 'material-ui-icons/HotTub';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import Divider from 'material-ui/Divider';
 
 const styles = theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
   },
 });
@@ -21,16 +21,18 @@ function SimpleList(props) {
       <List component="nav">
         <ListItem button>
           <ListItemIcon>
-            <GardenIcon/> />
+            <GardenIcon  /> 
           </ListItemIcon>
           <ListItemText primary="Garden" />
         </ListItem>
+        <Divider />
         <ListItem button>
           <ListItemIcon>
             <KitchenIcon />
           </ListItemIcon>
           <ListItemText primary="Kitchen" />
-        </ListItem>
+        </ListItem>      
+        <Divider />
         <ListItem button>
           <ListItemIcon>
             <BathRoomIcon />
