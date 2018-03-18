@@ -8,6 +8,8 @@ import Button from 'material-ui/Button';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import firebase from 'firebase';
+import Drawer from 'material-ui/Drawer';
+import Hidden from 'material-ui/Hidden';
 
 const styles = {
   root: {
@@ -22,6 +24,17 @@ const styles = {
   },
 };
 
+var state = {
+  open: false,
+}
+
+function toggleDrawer() {
+
+  state.open = !state.open;
+  console.log(state.open);
+
+};
+
 function handleClose() {
   firebase.auth().signOut();
 };
@@ -33,7 +46,7 @@ function ButtonAppBar(props) {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            <IconButton onClick={toggleDrawer} className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
             <Typography variant="title" color="inherit" className={classes.flex}>
@@ -42,10 +55,22 @@ function ButtonAppBar(props) {
             <Button onClick={handleClose} color="inherit">Logout</Button>
           </Toolbar>
         </AppBar>
+        <Drawer open={state.open} onClose={toggleDrawer()}>
+          <div
+            role="button"
+            onClick={toggleDrawer()}
+            onKeyDown={toggleDrawer()}
+          >
+          About
+          </div>
+        </Drawer>
+  
+      
       </div>
     );
   } else {
     return (
+
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
@@ -62,8 +87,8 @@ function ButtonAppBar(props) {
 
   }
 }
-  ButtonAppBar.propTypes = {
-    classes: PropTypes.object.isRequired,
-  };
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
 
-  export default withStyles(styles)(ButtonAppBar);
+export default withStyles(styles)(ButtonAppBar);
