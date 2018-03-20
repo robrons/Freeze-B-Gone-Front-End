@@ -74,7 +74,7 @@ class ButtonAppBar extends React.Component {
               onClick={this.toggleDrawer}
               onKeyDown={this.toggleDrawer}
             >
-              <List style={{ width: 300 }}>
+              <List style={{ width: 270 }}>
                 <ListItem>
                   <ListItemIcon>
                     <AboutIcon />
@@ -82,6 +82,12 @@ class ButtonAppBar extends React.Component {
                   <ListItemText inset primary="About" />
                 </ListItem>
               </List>
+              <Typography style={{ marginLeft: 18, maxWidth: 250}} align="left">
+              The purpose of this project is to design and develop a temperature/humidity
+               monitoring system which will make use of a Raspberry Pi Zero W and a 
+               temperature sensor to track and monitor temperature changes near piping
+                systems. 
+              </Typography>
             </div>
 
           </Drawer>
@@ -109,7 +115,7 @@ class ButtonAppBar extends React.Component {
               onClick={this.toggleDrawer}
               onKeyDown={this.toggleDrawer}
             >
-              <List style={{ width: 300 }}>
+              <List style={{ width: 270 }}>
                 <ListItem>
                   <ListItemIcon>
                     <AboutIcon />
@@ -119,7 +125,7 @@ class ButtonAppBar extends React.Component {
                 </ListItem>
               </List>
 
-              <Typography style={{ marginLeft: 20, maxWidth: 300}} component="h2">
+                <Typography style={{ marginLeft: 18, maxWidth: 250}} align="left">
               The purpose of this project is to design and develop a temperature/humidity
                monitoring system which will make use of a Raspberry Pi Zero W and a 
                temperature sensor to track and monitor temperature changes near piping
