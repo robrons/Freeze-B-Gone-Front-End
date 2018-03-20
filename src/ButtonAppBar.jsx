@@ -24,66 +24,78 @@ const styles = {
   },
 };
 
-var state = {
-  open: false,
-}
+class ButtonAppBar extends React.Component {
 
-function toggleDrawer() {
+  constructor(props) {
+    super(props);
 
-  state.open = !state.open;
-  console.log(state.open);
+    this.state = {
+      open: false,
+      logout: props.logout
+    }
 
-};
+    this.toggleDrawer = () => {
 
-function handleClose() {
-  firebase.auth().signOut();
-};
+      this.setState({ open: !this.state.open });
 
-function ButtonAppBar(props) {
-  const { classes } = props;
-  if (props.logout) {
-    return (
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton onClick={toggleDrawer} className={classes.menuButton} color="inherit" aria-label="Menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="title" color="inherit" className={classes.flex}>
-              Freeze-B-Gone
+    };
+
+
+    this.handleClose = () => {
+
+      firebase.auth().signOut();
+
+    };
+
+  }
+
+  render() {
+    const { classes } = this.props;
+    if (this.state.logout) {
+      return (
+        <div className={classes.root}>
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton onClick={this.toggleDrawer} className={classes.menuButton} color="inherit" aria-label="Menu">
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="title" color="inherit" className={classes.flex}>
+                Freeze-B-Gone
           </Typography>
-            <Button onClick={handleClose} color="inherit">Logout</Button>
-          </Toolbar>
-        </AppBar>
-        <Drawer open={state.open} onClose={toggleDrawer()}>
-          <div
-            role="button"
-            onClick={toggleDrawer()}
-            onKeyDown={toggleDrawer()}
-          >
-          About
+              <Button onClick={this.handleClose} color="inherit">Logout</Button>
+            </Toolbar>
+          </AppBar>
+          <Drawer open={this.state.open} onClose={this.toggleDrawer}>
+            <div
+              role="button"
+              onClick={this.toggleDrawer}
+              onKeyDown={this.toggleDrawer}
+            >
+              About
           </div>
-        </Drawer>
-  
-      
-      </div>
-    );
-  } else {
-    return (
+          </Drawer>
 
-      <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="title" color="inherit" className={classes.flex}>
-              Freeze-B-Gone
+
+        </div>
+      );
+    } else {
+      return (
+
+        <div className={classes.root}>
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton onClick={this.toggleDrawer} className={classes.menuButton} color="inherit" aria-label="Menu">
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="title" color="inherit" className={classes.flex}>
+                Freeze-B-Gone
           </Typography>
-          </Toolbar>
-        </AppBar>
-      </div>
-    );
+            </Toolbar>
+          </AppBar>
+        </div>
+      );
+
+    }
 
   }
 }
