@@ -126,7 +126,7 @@ class ButtonAppBar extends React.Component {
               </List>
 
                 <Typography style={{ marginLeft: 18, maxWidth: 250}} align="left">
-              The purpose of this project is to design and develop a temperature/humidity
+               The purpose of this project is to design and develop a temperature/humidity
                monitoring system which will make use of a Raspberry Pi Zero W and a 
                temperature sensor to track and monitor temperature changes near piping
                 systems. 
