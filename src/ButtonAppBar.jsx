@@ -49,8 +49,8 @@ class ButtonAppBar extends React.Component {
       firebase.auth().signOut();
 
     };
-
   }
+
 
   render() {
     const { classes } = this.props;
