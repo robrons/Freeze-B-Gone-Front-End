@@ -89,8 +89,8 @@ class ButtonAppBar extends React.Component {
                   <ListItemText inset primary="About" />
                 </ListItem>
               </List>
-              <Typography style={{ marginLeft: 18, maxWidth: 250}} align="left">
-              The purpose of this project is to design and develop a temperature/humidity
+              <Typography style={{ "font-size": 15, marginLeft: 18, maxWidth: 250}} align="left">
+              The purpose of this project is to design and develop a temperature
                monitoring system which will make use of a Raspberry Pi Zero W and a 
                temperature sensor to track and monitor temperature changes near piping
                 systems. 
@@ -127,13 +127,13 @@ class ButtonAppBar extends React.Component {
                   <ListItemIcon>
                     <AboutIcon />
                   </ListItemIcon>
-                  <ListItemText inset primary="About" />
+                  <ListItemText  inset primary="About" />
 
                 </ListItem>
               </List>
 
-                <Typography style={{ marginLeft: 18, maxWidth: 250}} align="left">
-               The purpose of this project is to design and develop a temperature/humidity
+                <Typography style={{ "font-size": 15, marginLeft: 18, maxWidth: 250}} align="left">
+               The purpose of this project is to design and develop a temperature
                monitoring system which will make use of a Raspberry Pi Zero W and a 
                temperature sensor to track and monitor temperature changes near piping
                 systems. 
