@@ -8,6 +8,8 @@ import { store } from './_helpers';
 import { App } from './App';
 
 render(
-
-      <SignInScreen/>
-, document.getElementById('app'));
+      <Provider store={store}>
+          <App />
+      </Provider>,
+      document.getElementById('app')
+  );
