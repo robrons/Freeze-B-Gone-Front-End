@@ -13,6 +13,11 @@ import Hidden from 'material-ui/Hidden';
 import List, { ListItem, ListItemIcon, ListItemText, ListItemSecondaryAction } from 'material-ui/List';
 import ListSubheader from 'material-ui/List/ListSubheader';
 import AboutIcon from 'material-ui-icons/Info';
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
+import { withRouter } from 'react-router'
+
 
 const styles = {
   root: {
@@ -29,9 +34,10 @@ const styles = {
 
 class ButtonAppBar extends React.Component {
 
+  
   constructor(props) {
     super(props);
-
+    
     this.state = {
       open: false,
       logout: props.logout
@@ -46,7 +52,8 @@ class ButtonAppBar extends React.Component {
 
     this.handleClose = () => {
 
-      firebase.auth().signOut();
+
+      this.props.history.push('/login');
 
     };
   }
@@ -146,4 +153,7 @@ ButtonAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ButtonAppBar);
+
+const ButtonAppBarWithRouter = withRouter(ButtonAppBar)
+
+export default withStyles(styles)(ButtonAppBarWithRouter);
