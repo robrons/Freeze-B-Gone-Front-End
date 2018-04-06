@@ -14,7 +14,7 @@ const config = {
   // ...
 };
 
-firebase.initializeApp(config);
+firebase.initializeApp(config); 
 
 export default class SignInScreen extends React.Component {
 
