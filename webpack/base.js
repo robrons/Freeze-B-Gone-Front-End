@@ -11,6 +11,7 @@ const base = {
       appPath,
       nodePath,
     ],
+    extensions: ['.js', '.jsx'],
   },
 
   output: {

@@ -14,7 +14,7 @@ export const userActions = {
 function login(username, password) {
     return dispatch => {
         dispatch(request({ username }));
-
+ 
         userService.login(username, password)
             .then(
                 user => { 
@@ -39,7 +39,7 @@ function logout() {
 }
 
 function register(user) {
-    return dispatch => {
+    return dispatch => { 
         dispatch(request(user));
 
         userService.register(user)
