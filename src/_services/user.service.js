@@ -65,9 +65,9 @@ function register(user) {
         body: JSON.stringify({ email: user.username, password: user.password })
     };
 
-    return fetch('https://cors-anywhere.herokuapp.com/http://35.226.42.111:8081/rest/user/create', requestOptions).then(handleResponse);
+    return fetch('http://35.226.42.111:8081/rest/user/create', requestOptions).then(handleResponse);
 }
-
+ 
 function update(user) {
     const requestOptions = {
         method: 'PUT',
