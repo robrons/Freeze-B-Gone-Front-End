@@ -16,7 +16,7 @@ function login(username, password) {
         body: JSON.stringify({ email: username, password: password })
     };
 
-    return fetch('https://cors-anywhere.herokuapp.com/http://35.226.42.111:8081/rest/auth/login', requestOptions)
+    return fetch('http://35.226.42.111:8081/rest/auth/login', requestOptions)
         .then(response => {
             if (!response.ok) { 
                 return Promise.reject(response.statusText);
