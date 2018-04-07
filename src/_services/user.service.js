@@ -1,4 +1,4 @@
-import { authHeader } from '../_helpers';
+import { authHeader, config } from '../_helpers';
 
 export const userService = {
     login,
@@ -13,11 +13,10 @@ export const userService = {
 function login(username, password) {
     const requestOptions = {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ email: username, password: password })
     };
 
-    return fetch('/users/authenticate', requestOptions)
+    return fetch('https://cors-anywhere.herokuapp.com/http://35.226.42.111:8081/rest/auth/login', requestOptions)
         .then(response => {
             if (!response.ok) { 
                 return Promise.reject(response.statusText);
@@ -31,7 +30,6 @@ function login(username, password) {
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
             }
-
             return user;
         });
 }
@@ -60,13 +58,14 @@ function getById(id) {
 }
 
 function register(user) {
+    console.log(user)
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(user)
+        body: JSON.stringify({ email: user.username, password: user.password })
     };
 
-    return fetch('/users/register', requestOptions).then(handleResponse);
+    return fetch('https://cors-anywhere.herokuapp.com/http://35.226.42.111:8081/rest/user/create', requestOptions).then(handleResponse);
 }
 
 function update(user) {
@@ -90,6 +89,7 @@ function _delete(id) {
 }
 
 function handleResponse(response) {
+    console.log(response);
     if (!response.ok) { 
         return Promise.reject(response.statusText);
     }
