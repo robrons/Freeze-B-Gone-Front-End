@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { userActions } from '../_actions';
 import Particles from 'react-particles-js';
-import ButtonAppBar from 'ButtonAppBar.jsx'
+import ButtonAppBar from '../Material/ButtonAppBar.jsx'
 
 
 class LoginPage extends React.Component {

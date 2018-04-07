@@ -1,7 +1,7 @@
 import React from 'react';
-import ButtonAppBar from 'ButtonAppBar.jsx'
-import NestedLists from 'SimpleTabs.jsx'
-import FloatingActionButton from 'FloatingActionButton.jsx';
+import ButtonAppBar from '../Material/ButtonAppBar.jsx'
+import NestedLists from '../Material/SimpleTabs.jsx'
+import FloatingActionButton from '../Material/FloatingActionButton.jsx';
 import { withRouter } from 'react-router'
 
 function Home() {
