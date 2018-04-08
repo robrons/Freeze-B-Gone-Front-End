@@ -27,7 +27,7 @@ function login(username, password) {
         .then(user => {
             // login successful if there's a jwt token in the response
             if (user && user.token) {
-                
+                console.log("Token: " + user.token)
                 wsHandler(user.token)
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
@@ -45,7 +45,7 @@ function wsHandler(token) {
         var jsData = JSON.parse(e.data);
 
         if(5 == jsData['op']) {
-            console.log('Web Socket Authentication Sucessfull');            
+            console.log('Message: Web Socket Authenticaticated, Data: ' + e.data);            
             getDevices(token);
 
         } else {
@@ -58,7 +58,7 @@ function wsHandler(token) {
 
 }
 
-function getDevices(tokenVal) {
+function getDevices() {
     const requestOptions = {
         method: 'GET',
         headers: authHeader()

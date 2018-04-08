@@ -15,7 +15,11 @@
   <body style="margin:0px;">
     <div id="app"></div>
     <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
-    <script> var connection = new WebSocket("ws://35.226.42.111:8081/ws"); </script>
+    <script> var connection = new WebSocket("ws://35.226.42.111:8081/ws"); 
+              connection.onmessage = function (e) {
+                console.log(e.data)
+              }
+    </script>
     <script src="bundle.js"></script>
   </body>
 </html>
