@@ -27,12 +27,44 @@ function login(username, password) {
         .then(user => {
             // login successful if there's a jwt token in the response
             if (user && user.token) {
-                connection.send(user.token)
+                
+                wsHandler(user.token)
                 // store user details and jwt token in local storage to keep user logged in between page refreshes
                 localStorage.setItem('user', JSON.stringify(user));
             }
             return user;
         });
+}
+
+function wsHandler(token) {
+
+    connection.send(token)
+
+    connection.onmessage = function (e) {
+
+        var jsData = JSON.parse(e.data);
+
+        if(5 == jsData['op']) {
+            console.log('Web Socket Authentication Sucessfull');            
+            getDevices(token);
+
+        } else {
+            handleResponse(e.data);
+
+        }
+
+    };
+
+
+}
+
+function getDevices(tokenVal) {
+    const requestOptions = {
+        method: 'GET',
+        headers: authHeader()
+    };
+
+    return fetch('http://35.226.42.111:8081/rest/user/devices', requestOptions).then(handleResponse);
 }
 
 function logout() {
