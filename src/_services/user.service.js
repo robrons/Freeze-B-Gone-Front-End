@@ -40,7 +40,12 @@ function wsHandler(token) {
 
     connection.send(token)
 
+    // Not using for the demo 
+    /* 
+
     connection.onmessage = function (e) {
+
+        console.log(e);
 
         var jsData = JSON.parse(e.data);
 
@@ -49,11 +54,12 @@ function wsHandler(token) {
             getDevices(token);
 
         } else {
+
             handleResponse(e.data);
 
         }
 
-    };
+    }; */
 
 
 }
